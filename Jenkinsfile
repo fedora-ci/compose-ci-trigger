@@ -49,7 +49,7 @@ pipeline {
                     if (msg) {
                         msg['artifact']['builds'].each { build ->
                             def build_id = build['id']
-                            def res = sh(script: "./scripts/build_allowed ${compose_url} ${build_id}", returnStatus: true)
+                            def res = sh(script: "./scripts/build-allowed ${compose_url} ${build_id}", returnStatus: true)
                             println("cmd: $it res $res")
                             if (res == 0) {
                                 allTaskIds.add(build['task_id'])
