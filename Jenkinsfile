@@ -29,7 +29,7 @@ pipeline {
                        queue: 'osci-pipelines-queue-1'
                    ],
                    checks: [
-                       [field: '$.artifact.release', expectedValue: '^f35$']
+                       [field: '$.update.release.dist_tag', expectedValue: '^f35$']
                    ]
                )
            ]
